@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TextColl:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TextColl_jar</output-path>
+    <root id="archive" name="TextColl.jar">
+      <element id="module-output" name="TextColl" />
+    </root>
+  </artifact>
+</component>
