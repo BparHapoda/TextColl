@@ -153,8 +153,8 @@ public class Console {
     public static String inputString() {
 
         Scanner scanner = new Scanner(System.in);
-        String string = scanner.nextLine();
-        if (string==null){throw new IllegalArgumentException();}
+        String string = returnInputResult( scanner.nextLine());
+
         return string;
     }
 
@@ -177,5 +177,8 @@ public class Console {
 
         return sb.toString();
     }
+    public static String returnInputResult (String string){
 
+if (string==null){throw new NullPointerException();}
+return string;}
 }

@@ -28,6 +28,8 @@ public class TextCollection implements Storage, Serializable {
         System.out.println("Введите название файла  :");
         StringBuilder fileName = new StringBuilder();
         fileName.append(file);
+        String x = Console.inputString();
+        Console.returnInputResult(x);
         fileName.append(Console.inputString());
         fileName.append(".tdoc");
         System.out.println(fileName);
