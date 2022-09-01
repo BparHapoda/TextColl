@@ -9,17 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f0b3d77-2988-4ac8-af29-2644efd179c6" name="Changes" comment="посл изменение">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Console.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TextCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TextCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ConsoleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ConsoleTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="2f0b3d77-2988-4ac8-af29-2644efd179c6" name="Changes" comment="add first @test" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661897498586</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add first @test">
+      <created>1661977559146</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1661977559146</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,7 +141,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="посл изменение" />
-    <option name="LAST_COMMIT_MESSAGE" value="посл изменение" />
+    <MESSAGE value="add first @test" />
+    <option name="LAST_COMMIT_MESSAGE" value="add first @test" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
