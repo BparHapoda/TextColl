@@ -186,18 +186,13 @@ public class TextCollection implements Storage, Serializable {
         Menu menu = new Menu("Какой файл коллекции удалить :", false);
         for (File x : fileList) {
             menu.add(x.toString(), () -> {
-                storage.delete(x);
+                if (x.delete()){System.out.println("Файл "+x+ "уcпешно удален");}
                 menu.setExit(true);
             });
         }
         menu.add("Выход", () -> menu.setExit(true));
         menu.run();
 
-    }
-    @Override
-    public void delete(File file) {
-        System.out.println(file);
-        if (file.delete()){System.out.println("Файл "+file+ "уcпешно удален");};
     }
 
 

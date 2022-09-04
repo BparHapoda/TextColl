@@ -21,7 +21,7 @@ public interface Storage {
 
     void deleteFile(Storage storage);
 
-    void delete(File file);
+
 
     TextDoc openFile(File file);
 
