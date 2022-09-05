@@ -1,4 +1,4 @@
-
+import java.io.IOException;
 
 /*
 Создать приложение «Коллекция текстовых документов».
@@ -18,7 +18,7 @@
  */
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         new ConsoleApplication().run();
 
     }

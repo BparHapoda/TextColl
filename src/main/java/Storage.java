@@ -1,29 +1,19 @@
 
 import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
 
 
 public interface Storage {
-    void add();
 
+    void openCollection() throws IOException;
 
-    void view();
+    boolean deleteFile(TextDoc textDoc);
 
+    ArrayList<TextDoc> getSortedCollection();
+    ArrayList<TextDoc> getSortedCollection(sort sort);
 
-    void setRoot();
+    void createCollection(String rootPath);
 
-    void save();
-
-    Storage open();
-
-    void openFileFromCollection(Storage storage);
-
-    void showFileAtributes(Storage storage);
-
-    void deleteFile(Storage storage);
-
-
-
-    TextDoc openFile(File file);
-
-    void sortTextCollection(Storage storage);
+    ArrayList<TextDoc> createFileList();
 }

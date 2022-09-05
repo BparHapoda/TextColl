@@ -53,10 +53,4 @@ public class TextDoc implements Serializable {
         return string;
     }
 
-    public void print() {
-        Console console = new Console(12, 100);
-        console.outputPageText(console.create(text),true);
-
-    }
-
 }
