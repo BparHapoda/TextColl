@@ -1,5 +1,5 @@
 
-import java.io.File;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -10,7 +10,7 @@ public interface Storage {
 
     boolean deleteFile(TextDoc textDoc);
 
-    ArrayList<TextDoc> getSortedCollection();
+
     ArrayList<TextDoc> getSortedCollection(sort sort);
 
     void createCollection(String rootPath);

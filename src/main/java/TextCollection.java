@@ -6,6 +6,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class TextCollection implements Storage {
@@ -27,39 +28,40 @@ public class TextCollection implements Storage {
 
     public ArrayList<TextDoc> getSortedCollection(sort sort){
         ArrayList<TextDoc> textDocs = createFileList();
-        return  textDocs;
-//        ArrayList<TextDoc> sortedDocs = new ArrayList<>();
-//
-//        switch (sort) {
-//            case LENGTH:
-//                sortedDocs = (ArrayList<TextDoc>) textDocs.stream().sorted(new Comparator<TextDoc>() {
-//                    @Override
-//                    public int compare(TextDoc o1, TextDoc o2) {
-//                        if (o1.getText().length()<o2.getText().length()){return 1;}
-//                        if (o1.getText().length()>o2.getText().length()){return -1;}
-//                        return 0;
-//                    }
-//                }).toList();
-//                break;
-//            case AUTHOR:
-//                sortedDocs = (ArrayList<TextDoc>) textDocs.stream().
-//                        sorted(Comparator.comparing(TextDoc::getName)).toList();
-//                break;
-//            case DATE:
-//                sortedDocs = (ArrayList<TextDoc>) textDocs.stream().sorted(new Comparator<TextDoc>() {
-//                    @Override
-//                    public int compare(TextDoc o1, TextDoc o2) {
-//                        if (o2.getDate().isAfter(o1.getDate())){return 1;}
-//                        if (o2.getDate().isBefore(o1.getDate())){return -1;}
-//                        return 0;
-//                    }
-//                }).toList();
-//                break;
-//            case NAME:
-//            default:
-//        }
-//
-//        return sortedDocs;
+        //   return  textDocs;
+        ArrayList<TextDoc> sortedDocs = new ArrayList<>();
+
+       switch (sort) {
+          case LENGTH:
+                sortedDocs = (ArrayList<TextDoc>) textDocs.stream().sorted(new Comparator<TextDoc>() {
+                   @Override
+                   public int compare(TextDoc o1, TextDoc o2) {
+                       if (o1.getText().length()<o2.getText().length()){return 1;}
+                        if (o1.getText().length()>o2.getText().length()){return -1;}
+                        return 0;
+                    }
+             }).collect(Collectors.toList());
+               break;
+            case AUTHOR:
+               sortedDocs = (ArrayList<TextDoc>) textDocs.stream().
+                       sorted(Comparator.comparing(TextDoc::getName)).collect(Collectors.toList());
+                break;
+            case DATE:
+               sortedDocs = (ArrayList<TextDoc>) textDocs.stream().sorted(new Comparator<TextDoc>() {
+                   @Override
+                    public int compare(TextDoc o1, TextDoc o2) {
+                       if (o2.getDate().isAfter(o1.getDate())){return 1;}
+                       if (o2.getDate().isBefore(o1.getDate())){return -1;}
+                       return 0;
+                 }
+             }).collect(Collectors.toList());
+             break;
+         case NAME:
+             sortedDocs=textDocs;
+
+        }
+
+        return sortedDocs;
     }
 
 

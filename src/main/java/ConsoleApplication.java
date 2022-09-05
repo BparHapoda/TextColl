@@ -3,9 +3,8 @@
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Scanner;
-import java.util.stream.Stream;
+
 
 
 public class ConsoleApplication {
@@ -139,6 +138,7 @@ public class ConsoleApplication {
 
     public void sortTextCollection (){
         Menu menu4 = new Menu("Сортировка коллекции",false);
+        menu4.add("Сортировка по имени",()->showCollection(sort.NAME));
         menu4.add("Сортировка по длине текста",()->showCollection(sort.LENGTH));
         menu4.add("Сортировка по дате создания",()->showCollection(sort.DATE));
         menu4.add("Сортировка по автору",()->showCollection(sort.AUTHOR));

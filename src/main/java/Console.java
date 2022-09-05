@@ -120,12 +120,12 @@ public class Console {
         }).collect(Collectors.toList());
         return pagesFound;
     }
-    public ArrayList<Page> findAndReplace (ArrayList <Page>pages,String input,String output){
+    public ArrayList<Page> findAndReplace (ArrayList <Page>pages,String lookingString,String replaceString){
 
         for (Page page : pages){
             for (int i=0;i<page.getText().size();i++
             ){
-                String string=page.getText().get(i).replaceAll(input,output);
+                String string=page.getText().get(i).replaceAll(lookingString,replaceString);
                 page.getText().set(i,string);
 
             }
@@ -134,17 +134,17 @@ public class Console {
         return  pages;
     }
 
-    public boolean pageContains(Page page, String string) {
+    public boolean pageContains(Page page, String lookingString) {
 
-        List<String> find = page.getText().stream().filter(x -> x.contains(string)).toList();
+        List<String> find = page.getText().stream().filter(x -> x.contains(lookingString)).toList();
         return find.size() != 0;
     }
 
-    public Page addSelection(Page page, String string) {
-        String replacement = "\033[43m" + string + "\u001B[0m";
+    public Page addSelection(Page page, String lookingString) {
+        String replacement = "\033[43m" + lookingString + "\u001B[0m";
         for (int i = 0; i < page.getText().size(); i++) {
-            if (page.getText().get(i).contains(string)) {
-                String x = page.getText().get(i).replaceAll(string, replacement);
+            if (page.getText().get(i).contains(lookingString)) {
+                String x = page.getText().get(i).replaceAll(lookingString, replacement);
                 page.getText().set(i, x);
             }
         }
